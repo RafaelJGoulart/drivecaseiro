@@ -1,0 +1,60 @@
+# Ambiente Virtual
+
+venv/
+.venv/
+
+# Python
+
+**pycache**/
+*.pyc
+*.pyo
+*.pyd
+
+# Flask
+
+instance/
+.flaskenv
+
+# Uploads do MeuDrive
+
+uploads/
+
+# Logs
+
+*.log
+
+# VSCode
+
+.vscode/
+
+# PyCharm
+
+.idea/
+
+# Windows
+
+Thumbs.db
+Desktop.ini
+
+# Arquivos temporários
+
+temp/
+tmp/
+
+# Variáveis de ambiente
+
+.env
+
+# Build
+
+dist/
+build/
+
+# SQLite (caso use futuramente)
+
+*.db
+
+# Cache
+
+.pytest_cache/
+.mypy_cache/
