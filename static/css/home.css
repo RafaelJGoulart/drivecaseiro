@@ -1,0 +1,23 @@
+.home_container{
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    flex-direction:row;
+}
+
+.side{
+    width: 30vw;
+    height: 100vh;
+    background-color: var(--gray);
+    align-content:flex-end;
+}
+
+.side>h1{
+    color:var(--white)
+}
+
+.main{
+    width: 70vw;
+    height: 100vh;
+    background-color: var(--gray3);
+}
