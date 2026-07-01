@@ -1,22 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu drive</title>
-    <link rel="stylesheet" href="../static/css/designsystem.css">
+
+    <title>Drive Dashboard</title>
+
     <link rel="stylesheet" href="../static/css/home.css">
+
 </head>
 <body>
-    
-    <div class="home_container">
-        <div class="side">
-            <h1>Meu drive</h1>
+
+<main class="dashboard">
+
+    <!-- STORAGE -->
+
+    <section class="card storage">
+
+        <h2>Armazenamento</h2>
+
+        <span class="storage-text">
+            200gb / 400gb
+        </span>
+
+        <div class="progress">
+
+            <div class="progress-bar"></div>
 
         </div>
-        <div class="main"></div>
-    </div>
 
+        <div class="legend">
+
+            <div class="item">
+                <span class="dot blue"></span>
+                Ocupado
+            </div>
+
+            <div class="item">
+                <span class="dot gray"></span>
+                Vazio
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SERVER -->
+
+    <section class="card server">
+
+        <h2>Server Stats</h2>
+
+        <label class="switch">
+            <input type="checkbox" checked>
+            <span></span>
+        </label>
+
+        <label class="switch">
+            <input type="checkbox">
+            <span></span>
+        </label>
+
+        <div class="status">
+            <span class="online"></span>
+            Online
+        </div>
+
+        <div class="qr">
+            <div class="qr-placeholder"></div>
+        </div>
+    </section>
+
+    <!-- FILES -->
+
+    <section class="card files">
+
+        <h2>Arquivos</h2>
+
+        <span class="count">
+            26
+        </span>
+
+    </section>
+
+    <!-- RECENT -->
+
+    <section class="card recent">
+
+        <h2>Últimos arquivos</h2>
+
+        <ul>
+
+            <li>sla.html</li>
+            <li>sla.html</li>
+            <li>sla.html</li>
+            <li>sla.html</li>
+
+        </ul>
+
+    </section>
+
+</main>
 
 </body>
 </html>
