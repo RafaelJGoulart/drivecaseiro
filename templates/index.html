@@ -1,106 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Drive Dashboard</title>
-
     <link rel="stylesheet" href="../static/css/home.css">
-
+    <title>Dashboard</title>    
 </head>
 <body>
-
+    
 <main class="dashboard">
+    <div class="card storage">
+        <p>Armazenamento</p>
+    </div>
 
-    <!-- STORAGE -->
-
-    <section class="card storage">
-
-        <h2>Armazenamento</h2>
-
-        <span class="storage-text">
-            200gb / 400gb
-        </span>
-
-        <div class="progress">
-
-            <div class="progress-bar"></div>
-
+    <div class="card server">
+        <div class="server_info">
+            <p>Porta</p>
+        </div>
+        <div class="server_qr card">
+            <div class="qr_placeholder"></div>
         </div>
 
-        <div class="legend">
+    </div>
 
-            <div class="item">
-                <span class="dot blue"></span>
-                Ocupado
-            </div>
-
-            <div class="item">
-                <span class="dot gray"></span>
-                Vazio
-            </div>
-
+    <div class="card files">
+        <div class="counter">
+            <p>Arquivos</p>
+            <h1 class="number">0</h1>
         </div>
-
-    </section>
-
-    <!-- SERVER -->
-
-    <section class="card server">
-
-        <h2>Server Stats</h2>
-
-        <label class="switch">
-            <input type="checkbox" checked>
-            <span></span>
-        </label>
-
-        <label class="switch">
-            <input type="checkbox">
-            <span></span>
-        </label>
-
-        <div class="status">
-            <span class="online"></span>
-            Online
+        <div class="list card">
         </div>
-
-        <div class="qr">
-            <div class="qr-placeholder"></div>
-        </div>
-    </section>
-
-    <!-- FILES -->
-
-    <section class="card files">
-
-        <h2>Arquivos</h2>
-
-        <span class="count">
-            26
-        </span>
-
-    </section>
-
-    <!-- RECENT -->
-
-    <section class="card recent">
-
-        <h2>Últimos arquivos</h2>
-
-        <ul>
-
-            <li>sla.html</li>
-            <li>sla.html</li>
-            <li>sla.html</li>
-            <li>sla.html</li>
-
-        </ul>
-
-    </section>
-
+    </div>
 </main>
 
 </body>
