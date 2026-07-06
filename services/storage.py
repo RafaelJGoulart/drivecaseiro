@@ -3,6 +3,7 @@ import shutil
 
 UPLOAD_FOLDER = "uploads"
 
+
 def tamanho_uploads():
 
     tamanho = 0
@@ -29,6 +30,7 @@ def disco():
         "livre": livre
     }
 
+
 def formatar(bytes):
 
     unidades = ["B", "KB", "MB", "GB", "TB"]
@@ -37,7 +39,7 @@ def formatar(bytes):
 
     indice = 0
 
-    while tamanho >= 1024 and indice < len(unidades)-1:
+    while tamanho >= 1024 and indice < len(unidades) - 1:
 
         tamanho /= 1024
 
@@ -47,4 +49,37 @@ def formatar(bytes):
 
 
 def info():
-    pass
+
+    disco_info = disco()
+
+    uploads = tamanho_uploads()
+
+    porcentagem = (
+        uploads / disco_info["total"] * 100
+        if disco_info["total"] > 0
+        else 0
+    )
+
+    return {
+
+        "disk": {
+
+            "total": disco_info["total"],
+            "used": disco_info["usado"],
+            "free": disco_info["livre"],
+
+            "total_formatted": formatar(disco_info["total"]),
+            "used_formatted": formatar(disco_info["usado"]),
+            "free_formatted": formatar(disco_info["livre"])
+
+        },
+
+        "uploads": {
+
+            "size": uploads,
+            "size_formatted": formatar(uploads),
+            "percentage": round(porcentagem, 2)
+
+        }
+
+    }
