@@ -1,23 +1,109 @@
-.home_container{
-    width: 100vw;
-    height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap');
+
+:root{
+
+    --bg:#090909;
+    --panel:#1b1b1b;
+    --border:#444;
+    --text:#efefef;
+    --blue:#2499ff;
+    --green:#0fe67b;
+    --red:#ff4966;
+
+    --blue2:#2499ff88;
+    --green2:#0fe67b88;
+    --red2:#ff496688;
+    --radius:12px;
+    --padding:16px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"JetBrains Mono", monospace;
+}
+
+body{
+
+    background:var(--bg);
+    color:var(--text);
     display:flex;
-    flex-direction:row;
+    justify-content:center;
+    padding:40px;
+
 }
 
-.side{
-    width: 30vw;
-    height: 100vh;
-    background-color: var(--gray);
-    align-content:flex-end;
+
+p{
+
+    font-size:16px;
+    font-weight:400;
+
+}
+.dashboard{
+    width:1050px;
+    display:grid;
+    gap:18px;
+    grid-template-columns:repeat(12,1fr);
 }
 
-.side>h1{
-    color:var(--white)
+.card{
+
+    background:linear-gradient(135deg,#2e2e2e,#171717);
+    border:1px solid #4a4a4a;
+    border-radius: 8px;
+    position: relative;
+    overflow:hidden;
 }
 
-.main{
-    width: 70vw;
-    height: 100vh;
-    background-color: var(--gray3);
+.storage{
+
+    grid-column: 1/13;
+    background:radial-gradient(farthest-corner at 1% 1%,var(--blue2),#17171700);
+    padding:var(--padding);
+}
+
+.server{
+    grid-column: 1/7;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    background:radial-gradient(farthest-corner at 1% 1%,var(--green2),#171717);
+}
+.server_info{
+    padding:var(--padding);
+}
+.server_qr{
+    padding:var(--padding);
+}
+.qr_placeholder{
+    width: 128px;
+    height: 128px;
+    background-color: #efefef;
+    border-radius: 4px;
+}
+
+.files{
+    grid-column: 7/13;
+    background:radial-gradient(farthest-corner at 1% 1%,var(--red2),#17171700);
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.counter{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:var(--padding);
+}
+.list{
+    width: 50%;
+    padding:var(--padding);
+}   
+
+.number{
+    font-size: 48px;
 }
